@@ -145,3 +145,9 @@ The simulation creates five output files in the `./data/baseline/` folder.
 **resources.csv.gz** contains a ledger of the available resources, their queue sizes as well as occupied CPUs during the simulation time.
 
 **config.csv** contains a description of the input configuration for later referencing.
+
+## Contact
+
+For questions or issues with the simulation, please raise an issue or contact 
+Stefan Geissler (stefan.geissler@informatik.uni-wuerzburg.de) or any of the authors of the related publication.
+
