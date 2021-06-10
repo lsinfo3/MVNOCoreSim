@@ -19,11 +19,10 @@ auc.genkeys.function <- function(x = 1) sample(auc.genkeys.sample, x, replace = 
 auc.upseq.sample <- dt_times[span_short == "auc_upseq"]$sample
 auc.upseq.function <- function(x = 1) sample(auc.upseq.sample, x, replace = T)
 
-#spc.sms.quantile <- quantile(dt_times[span_short == "hlr_spc_sms"]$sample, 0.90)
-spc.sms.sample <- dt_times[span_short == "hlr_spc_sms"]$sample # Note the weird naming. It was decided to only involve SPC in this span
-#spc.sms.sample <- rep(14000, 10)
+spc.sms.sample <- dt_times[span_short == "hlr_spc_sms"]$sample
 spc.sms.function <- function(x = 1) sample(spc.sms.sample, x, replace = T)
 
+# Unused
 # spc.dbquery.sample <- dt_times[span_short == "spc_dbquery"]$sample
 # spc.dbquery.function <- function(x = 1) sample(spc.dbquery.sample, x, replace = T)
 
@@ -31,5 +30,4 @@ spc.hit.sample <- dt_times[span_short == "spc_hit"]$sample
 spc.hit.function <- function(x = 1) sample(spc.hit.sample, x, replace = T)
 
 spc.miss.sample <- dt_times[span_short == "spc_miss"]$sample
-#spc.miss.sample <- rep(65000, 10)
 spc.miss.function <- function(x = 1) sample(spc.miss.sample, x, replace = T)
