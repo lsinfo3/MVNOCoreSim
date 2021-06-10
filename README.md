@@ -28,7 +28,7 @@ To run the example provided in this repository ([run_sim.R](run_sim.R)), the fol
 ```R
 install.packages(c("simmer", "tidyverse", "data.table", "futile.logger"))
 ```
-The code is strucuted as follows
+The code is structured as follows
 
 ```bash
 .
