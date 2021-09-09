@@ -8,11 +8,13 @@ This repository accompanies the following publication:
 
 ![Schematic representation of the simulation structure](resources/sim_schematic.png)
 
-The simulation consists of two distinct models, the device behavior model and the MVNO core model, as shown in the figure above.
+The simulation consists of two distinct models, the signaling model and the MVNO core model, as shown in the figure above.
 
-Devices aim to complete their attachment cycle consisting of the four depicted signaling messages, while attempting a retry of the timers are triggered.
+Devices, represented by the signaling interaction between VLR/SGSN and HLR, aim to complete their attachment cycle consisting of the four depicted signaling messages, while attempting a retry if the timers are triggered.
 
 The core model processes arriving signaling messages and transmits responses to the issuing device.
+
+Note that we call these objects _devices_, although we are not nececarrily talking about physical _IoT devices_. Instead, _devices_ in our simulation are abstract elements that generate signaling load.
 
 ## Implementation and Structure
 
@@ -134,7 +136,7 @@ Here, *baseline* describes the name of the currently running simulation, which a
 
 Next, the output shows the percentage progress towards completion based on the configured `runtime`. `nDev` shows the number of generated devices, `unattached` shows the number of generated devices that have not yet completed their attachment cycle. `time` provides the passed simulation time in minutes.
 
-The simulation creates five output files in the `./data/baseline/` folder.
+The simulation creates five output files in the `./data/baseline/` folder. Example results are included in this repository in _csv.gz_ format. These example results have been generated using the preconfigured `run_sim.R` script.
 
 **arrivals.csv.gz** contains a ledger of each signaling dialog and when it was processed by which component. The format is default to `r-simmer` and well documented there.
 
