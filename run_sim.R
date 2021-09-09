@@ -20,7 +20,7 @@ source("./sim/sim_device_policing_recovery.R")
 
 config <- list(
   n_devices = 50000, # The number of devices to simulate
-  init_rate = 300, # The arrival rate of new devices
+  init_rate = 100, # The arrival rate of new devices
   runtime = 10, # Max runtime of the simulation - mostly relevant for overload scenarios in which consinuously fail to attach to the system
   policing = list(
     # Parameters for MSU Policing
@@ -92,8 +92,8 @@ dt_attachment_rate <- attributes %>%
   dplyr::mutate(bin = floor(time / 1000 / 1000)) %>%
   dplyr::group_by(bin) %>%
   dplyr::summarize(n = n()) %>%
-  complete(bin = 0:max(bin), fill = list(n = 0)) %>% 
-  as.data.table()
+  tidyr::complete(bin = 0:max(bin), fill = list(n = 0)) %>% 
+  data.table::as.data.table()
 
 ggplot(data = dt_attachment_rate, aes(x = bin, y = n)) + 
   geom_line() + 

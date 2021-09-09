@@ -1,0 +1,2 @@
+n_devices,init_rate,runtime,policing.sai_vlr,policing.sai_sgsn,policing.ul,policing.ul_gprs,policing.n_dev,capacity.cmap,capacity.hlr,capacity.spc,capacity.auc,capacity.isd,queue.cmap,queue.hlr,queue.spc,queue.auc,queue.isd,retry.sai,retry.ul,retry.ul_gprs,real_duration
+50000,100,10,3000,3000,3000,3000,3000,8,64,128,8,Inf,Inf,Inf,Inf,Inf,Inf,6,15,15,54
