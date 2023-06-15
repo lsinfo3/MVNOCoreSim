@@ -4,7 +4,7 @@ This is a simulation of a 3G MVNO virtual mobile core on protocol level includin
 
 This repository accompanies the following publication:
 
-**TODO**
+*Geißler, S., Wamser, F., Bauer, W., Gebert, S., Kounev, S., & Hoßfeld, T. (2023). MVNOCoreSim: A Digital Twin for Virtualized IoT-centric Mobile Core Networks. IEEE Internet of Things Journal.*
 
 ![Schematic representation of the simulation structure](resources/sim_schematic.png)
 
